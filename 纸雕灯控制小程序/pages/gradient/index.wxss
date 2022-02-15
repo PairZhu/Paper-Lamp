@@ -1,0 +1,73 @@
+/* pages/gradient/index.wxss */
+.gradient {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section__title {
+  margin-bottom: 0.5em;
+}
+.choose {
+  margin-top: 1em;
+  text-align: center;
+  height: 3em;
+  width:80vw;
+}
+.choose slider {
+  width: 80vw;
+  margin-right: -0.5em;
+}
+
+.color-block {
+  width:70vw;
+  height:10vh;
+  margin:0 auto;
+  font-size: 1.1em;
+  text-align: center;
+  line-height: 10vh;
+  color: white;
+  box-shadow: 0 0 0.6em gray;
+}
+
+.page__hd {
+  align-items: center;
+  width: 100vw;
+  padding:1em 0;
+}
+
+.page__title {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+.color-picker {
+  margin-bottom: 1em;
+}
+
+.section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  font-size: 1.2em;
+  width: 80vw;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15vh;
+}
+
+.section__value {
+  width: 8em;
+  text-align: center;
+  margin-left: -1em;
+  word-spacing:-0.05em;
+}

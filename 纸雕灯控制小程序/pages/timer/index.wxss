@@ -1,0 +1,42 @@
+/* pages/timer/index.wxss */
+.timer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.sleep-time {
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pick-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18vh;
+}
+.section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  font-size: 1.2em;
+  width: 80vw;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25vh;
+}
+
+.section__value {
+  width: 8em;
+  text-align: center;
+  margin-left: -1em;
+  word-spacing:-0.05em;
+}

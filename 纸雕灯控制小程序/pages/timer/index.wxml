@@ -1,0 +1,35 @@
+<!--pages/timer/index.wxml-->
+<view class="timer">
+  <view wx:if="{{sleepTime}}" class="sleep-time">
+    <text>{{sleepTimeText}}</text>
+    <text>后自动关闭</text>
+  </view>
+  <view wx:else="{{sleepTime}}" class="sleep-time">
+    暂未设置定时关闭
+  </view>
+  <view class="pick-time">
+    <view class="section">
+      <view class="section__title">定时关闭：</view>
+      <view class="section__value">{{setTimeText}}</view>
+      <picker mode="time" bindchange="setTimeOnChange">
+        <button class="picker" size="mini" type="primary">
+          设置
+        </button>
+      </picker>
+    </view>
+    <view class="section">
+      <view class="section__title">计时关闭：</view>
+      <view class="section__value">{{countTimeText}}</view>
+      <picker mode="multiSelector" range="{{multiArray}}" bindchange="countTimeOnChange">
+        <button class="picker" size="mini" type="primary">
+          设置
+        </button>
+      </picker>
+    </view>
+  </view>
+  <view class="bottom">
+    <button bindtap="powerDown" data-time="{{0}}" type="primary" style="{{'background-color:red'}}">立即关闭</button>
+    <button bindtap="cancelPowerDown">取消定时</button>
+    <button bindtap="powerDown" data-time="{{time}}" type="primary">设置定时</button>
+  </view>
+</view>

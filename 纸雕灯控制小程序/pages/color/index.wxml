@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<!-- 自定义 -->
+<view class="color-container">
+    <view class="picker-container">
+        <view wx:if="{{userInput}}" class="choose">
+            <text class="section__title">红色</text>
+            <slider min='0' max='255' data-type="red" bindchange="previewColor" bindchanging="previewColor" value="{{colorData.pickerData.red}}" show-value />
+        </view>
+        <view wx:if="{{userInput}}" class="choose">
+            <text class="section__title">绿色</text>
+            <slider min='0' max='255' data-type="green" bindchange="previewColor" bindchanging="previewColor" value="{{colorData.pickerData.green}}" show-value />
+        </view>
+        <view wx:if="{{userInput}}" class="choose">
+            <text class="section__title">蓝色</text>
+            <slider min='0' max='255' data-type="blue" bindchange="previewColor" bindchanging="previewColor" value="{{colorData.pickerData.blue}}" show-value />
+        </view>
+        <view class="preview-container" wx:if="{{userInput}}" >
+            <text>预览：</text>
+            <view class="preview" style="background-color:{{colorData.pickerData.hex}};"></view>
+        </view>
+        <color-picker wx:else="{{userInput}}" class="color-picker" colorData="{{colorData}}" rpxRatio="{{rpxRatio}}" bindchangecolor="onChangeColor" />
+    </view>
+    <view class="bottom">
+        <view class="index-choose">
+            <view class="choose">
+                <text class="section__title">起始编号</text>
+                <slider min='1' max='12' model:value="{{begin}}" show-value />
+            </view>
+            <view class="choose">
+                <text class="section__title">结束编号</text>
+                <slider min="{{begin}}" max='12' model:value="{{end}}" show-value />
+            </view>
+        </view>
+        <button bindtap="changeMode">{{userInput?"颜色拾取":"手动输入"}}</button>
+        <view class="save-reset">
+            <button type="primary" size="mini" bindtap="saveColor">保存颜色</button>
+            <button type="primary" style="{{'background-color:red'}}" size="mini" bindtap="resetColor">恢复颜色</button>
+        </view>
+    </view>
+</view>

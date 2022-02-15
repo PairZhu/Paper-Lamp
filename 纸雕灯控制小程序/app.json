@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/gradient/index",
+    "pages/timer/index",
+    "pages/color/index"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/home.png",
+        "selectedIconPath": "img/home_fill.png"
+      },
+      {
+        "pagePath": "pages/timer/index",
+        "iconPath": "img/time.png",
+        "selectedIconPath": "img/time_fill.png"
+      },
+      {
+        "pagePath": "pages/color/index",
+        "iconPath": "img/color.png",
+        "selectedIconPath": "img/color_fill.png"
+      },
+      {
+        "pagePath": "pages/gradient/index",
+        "iconPath": "img/favor.png",
+        "selectedIconPath": "img/favor_fill.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#01a4ef",
+    "navigationBarTitleText": "小王子纸雕灯",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

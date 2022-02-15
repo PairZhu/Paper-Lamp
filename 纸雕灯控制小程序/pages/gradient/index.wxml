@@ -1,0 +1,27 @@
+<!--pages/gradient/index.wxml-->
+<template name="color-picker">
+  <view class="color-picker">
+    <view style="background:{{rgb}};color:{{fontColor}};" data-key="{{key}}" bindtap="toPick" class="color-block">
+      <text>{{name}}：</text>
+      <text>{{rgb}}</text>
+    </view>
+  <mini-color-picker data-key="{{key}}" bindchangeColor="pickColor" initColor="{{rgb}}" show="{{pick}}" />
+  </view>
+</template>
+<view class="gradient">
+  <view class="page__hd">
+    <view class="page__title">点击色块取色</view>
+  </view>
+  <template is='color-picker' data="{{...headBegin}}"/>
+  <template is='color-picker' data="{{...headEnd}}"/>
+  <template is='color-picker' data="{{...tailBegin}}"/>
+  <template is='color-picker' data="{{...tailEnd}}"/>
+  <view class="choose">
+    <text class="section__title">变化周期（秒）</text>
+    <slider min='1' max='60' model:value="{{period}}" show-value />
+  </view>
+  <view class="bottom">
+    <button bindtap="cancelGradient">取消灯效</button>
+    <button type="primary" bindtap="setGradient">设置灯效</button>
+  </view>
+</view>

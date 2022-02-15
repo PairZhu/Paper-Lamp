@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mini-color-picker": "/components/mini-color-picker/color-picker"
+  },
+  "navigationBarTitleText": "呼吸变色灯效"
+}

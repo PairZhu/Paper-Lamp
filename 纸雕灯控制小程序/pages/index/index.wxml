@@ -1,0 +1,30 @@
+<!--pages/index/index.wxml-->
+<view class="index-container">
+  <view class="setting" wx:if="{{isConnected}}">
+    <view wx:if="{{sleepTime}}" class="sleep-time">
+      <text>{{sleepTimeText}}</text>
+      <text>后自动关闭</text>
+    </view>
+    <view class="choose">
+      <view class="section__title">内置彩灯开关</view>
+      <view class="body-view">
+        <switch data-flag="{{1}}" bindchange="switchChange" checked="{{state&1}}" />
+      </view>
+    </view>
+    <view class="choose">
+      <view class="section__title">可控彩灯开关</view>
+      <view class="body-view">
+        <switch data-flag="{{2}}" bindchange="switchChange" checked="{{state&2}}" />
+      </view>
+    </view>
+    <view class="choose">
+      <text class="section__title">可控彩灯亮度</text>
+      <slider min='0' max='255' bindchange="onBrightChanging" bindchanging="onBrightChanging" model:value="{{brightness}}" show-value />
+    </view>
+  </view>
+  <view class="connect">
+    <button bindtap="bleConnect" type="primary" style="{{isConnected ? 'background-color:red':''}}">
+      {{isConnected?'断开连接':'连接设备'}}
+    </button>
+  </view>
+</view>

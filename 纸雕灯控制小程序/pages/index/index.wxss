@@ -1,0 +1,45 @@
+/* pages/color/index.wxss */
+.index-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.setting {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.sleep-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.setting {
+  font-size: 1.2em;
+}
+.section__title {
+  margin-bottom: 0.5em;
+}
+.choose {
+  text-align: center;
+  height: 3em;
+  width:80vw;
+}
+.choose slider {
+  width: 80vw;
+  margin-right: -0.5em;
+}
+.connect {
+  display: flex;
+  flex-direction: column;
+}
+.state {
+  margin: 1em;
+  font-size:larger;
+}
