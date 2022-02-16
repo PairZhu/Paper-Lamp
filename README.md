@@ -21,7 +21,8 @@
 2. WS2812LED
 3. JDY-18低功耗蓝牙模块（[用户手册链接](./资料/JDY-18蓝牙4.2模块JDY-18-V1.7.pdf)）
 4. MOS场效应管（作为原始灯带的开关）
-5. 国产芯片版Arduino Nano （[原理图链接](./资料/LGT328P-LQFP32-Nano.pdf)） 
+5. 国产芯片版Arduino Nano （[原理图链接](./资料/LGT328P-LQFP32-Nano.pdf)，淘宝连接https://m.tb.cn/h.fNi4SHu?tk=Ixba23xnige） 
+6. 纸雕灯DIY材料包（淘宝连接https://m.tb.cn/h.fNifSnO?tk=f0oh23xn2KG）
 
 Arduino Nano本项目采用与之几乎完全兼容的国产版代替，其使用国产芯片LGT8F328P代替ATMEGA328P CH340芯片，功耗比原版更低，当然更重要的是价格更便宜，如果使用原版芯片的Arduino Nano，需要自行修改单片机代码中休眠部分使用的库与渐变色所用的定时器。
 
